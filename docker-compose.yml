@@ -7,4 +7,4 @@ services:
     command: python /mysite/manage.py runserver 0.0.0.0:80
     restart: unless-stopped
     ports:
-     - 8032:80 # Change first value to any available port you wish to use
+     - 8145:80 # Change first value to any available port you wish to use
