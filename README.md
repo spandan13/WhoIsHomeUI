@@ -20,9 +20,9 @@ Unless otherwise stated in the changelog section ### Update Instructions
 ****Installation Instructions****
   - First install Docker and Docker Compose on your Raspberry Pi (or other similar device, hereafter referenced to as raspberry pi) following the link upto and including step 6:
 https://dev.to/elalemanyo/how-to-install-docker-and-docker-compose-on-raspberry-pi-1mo
-  - Git clone this repo to your raspberry pi: `git clone https://github.com/DartLazer/WhoIsHomeUI`
-  - In the cloned folder execute the following command: `docker-compose up -d`
-  - The container should now be up and running on your your_raspberrypi_ip_address:8000
+  - run ```docker run -d -p 8145:80 spandan13/whoishomeui:dev python /mysite/manage.py runserver 0.0.0.0:80```
+  - You can change 8145 in the above command to any available port you wish to use.
+  - Alternatively you can also use the docker-compose.yml file to deploy the container.
   - In your webbrowser go to `your_rasppberrypi_ip_address:8000/`
   - Go to the settings page and go to the Scanner Settings section:
   - Not Home Threshold (The amount of scans a device has to miss, to be considered to have left home). I would recommend leaving this to around 20. iPhones tend to disconnect sometimes. Leaving this on a lower value will register a lot of disconnects from Apple devices.
