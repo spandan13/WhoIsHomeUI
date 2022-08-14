@@ -23,7 +23,7 @@ https://dev.to/elalemanyo/how-to-install-docker-and-docker-compose-on-raspberry-
   - run ```docker run -d -p 8145:80 spandan13/whoishomeui:dev python /mysite/manage.py runserver 0.0.0.0:80```
   - You can change 8145 in the above command to any available port you wish to use.
   - Alternatively you can also use the docker-compose.yml file to deploy the container.
-  - In your webbrowser go to `your_rasppberrypi_ip_address:8000/`
+  - In your webbrowser go to `your_rasppberrypi_ip_address:8145/`
   - Go to the settings page and go to the Scanner Settings section:
   - Not Home Threshold (The amount of scans a device has to miss, to be considered to have left home). I would recommend leaving this to around 20. iPhones tend to disconnect sometimes. Leaving this on a lower value will register a lot of disconnects from Apple devices.
   - Internet interface should be: "eth0" for a wired ethernet connection. If your raspberry pi is using wifi use "wlp2s0" or type "ifconfig" in command line to get the active interface name.
@@ -35,7 +35,7 @@ https://dev.to/elalemanyo/how-to-install-docker-and-docker-compose-on-raspberry-
   - In the email body and subject you can access the following variables by putting them in curly brackets {}
   - target (gives target name), arrival_time, departure_time , time_away, time_home.
 
-  - Go to `your_raspberrypi_ip_addres:8000/settings/`
+  - Go to `your_raspberrypi_ip_addres:8145/settings/`
 
   - Enable scanner status and you should be up and running!
 
