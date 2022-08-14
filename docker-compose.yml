@@ -4,7 +4,7 @@ services:
   web:
     network_mode: "bridge"
     image: spandan13/whoishomeui:dev
-    command: python /mysite/manage.py runserver 0.0.0.0:8000
+    command: python /mysite/manage.py runserver 0.0.0.0:80
     restart: always
     ports:
-     - 8032:8000
+     - 8032:80 # Change first value to any available port you wish to use
