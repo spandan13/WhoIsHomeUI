@@ -2,9 +2,9 @@ version: "3.8"
    
 services:
   web:
-    network_mode: "host"
-    build: .
-    command: python mysite/manage.py runserver 0.0.0.0:8000
+    network_mode: "bridge"
+    image: spandan13/whoishomeui:dev
+    command: python /mysite/manage.py runserver 0.0.0.0:8000
     restart: always
-    volumes:
-      - .:/mysite
+    ports:
+     - 8032:8000
