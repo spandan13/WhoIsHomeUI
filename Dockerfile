@@ -1,4 +1,4 @@
-FROM python:3-buster
+FROM python:3-slim-buster
 ENV PYTHONUNBUFFERED=1
 RUN mkdir /mysite
 WORKDIR /mysite
