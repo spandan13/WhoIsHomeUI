@@ -2,11 +2,9 @@ version: "3.8"
    
 services:
   web:
-    network_mode: "bridge"
+    network_mode: "host"
     build: . #If installing using image then comment this line and uncomment the below line
     #image: spandan13/whoishomeui:dev-slim-buster
     container_name: whoishomeui
-    command: python /mysite/manage.py runserver 0.0.0.0:80
+    command: python /mysite/manage.py runserver 0.0.0.0:8145  # Change 8145 to any available port you wish to use
     restart: unless-stopped
-    ports:
-     - 8155:80 # Change first value to any available port you wish to use
